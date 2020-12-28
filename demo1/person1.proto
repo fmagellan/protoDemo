@@ -1,0 +1,17 @@
+syntax = "proto3";
+package demo1;
+
+option go_package = "github.com/fmagellan/protoDemo/demo1";
+
+// import "google/protobuf/timestamp.proto";
+
+message Person {
+  string firstName = 1;
+  int32 id = 2;  // Unique ID number for this person.
+  string lastName = 3;
+}
+
+// Our address book file is just one of these.
+message AddressBook {
+  repeated Person people = 1;
+}
